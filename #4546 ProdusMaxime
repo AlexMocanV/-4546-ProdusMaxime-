@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int long long n,maxi1=-111111,maxi2=-11111111,nr=0,x;
+    while(cin>>x&&x!=0)
+    {
+        if(x>maxi1)
+        {
+            maxi2=maxi1;
+            maxi1=x;nr++;
+        }
+        else if(x>maxi2&&x!=maxi1)
+        {
+            maxi2=x;
+            nr++;
+        }
+    }
+    if(nr>=2)
+    cout<<maxi1*maxi2;
+    else
+    cout<<"NU EXISTA";
+    return 0;
+}
